@@ -2,12 +2,14 @@ package com.bezkoder.spring.datajpa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
-public class SpringBootDataJpaApplication {
+@PropertySource("classpath:${CONFIG_MODE}/application.properties")
+public class FERApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootDataJpaApplication.class, args);
+		SpringApplication.run(FERApplication.class, args);
 	}
 
 }
